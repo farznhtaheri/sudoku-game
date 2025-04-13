@@ -48,6 +48,7 @@ function Sudoku() {
     setBoard(prev => {
       let newArr = Array.from(prev);
       newArr[rowIndex][colIndex] = value;
+      localStorage.setItem('board', JSON.stringify(newArr));
       return newArr;
     })
   }
